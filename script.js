@@ -4,7 +4,7 @@ function getComputerChoice() {
   // let rock = "rock";
   // let paper = "paper";
   // let scissor = "scissors";
-  let choice = Math.random();
+  let choice = Math.floor(Math.random() * 3);
   // console.log(Math.random());
   console.log(choice);
 }
