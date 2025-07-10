@@ -12,6 +12,11 @@ function getHumanChoice() {
     "Numbers 1, 2 and 3 please.\n1 for rock\n2 for paper\n3 for scissor\nDefault value (1)\nPlease enter your choice:",
     "1",
   );
+
+  if (user_input != "1" && user_input != "2" && user_input != "3") {
+    user_input = "1";
+  }
+
   return interpretChoice(user_input);
 }
 
@@ -57,7 +62,7 @@ function evaluateOutcome(user_input, computer_input) {
 }
 
 function playRound(humanChoice, computerChoice) {
-  score = evaluateOutcome(human_choice, computer_choice);
+  score = evaluateOutcome(humanChoice, computerChoice);
   console.log("Result: " + score);
   humanScore =
     humanScore + (score == "draw" ? 0 : score == "computer wins" ? 0 : 1);
