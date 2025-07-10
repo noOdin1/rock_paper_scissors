@@ -66,7 +66,8 @@ console.log("Computer choice: " + computer_choice);
 
 score = evaluateOutcome(human_choice, computer_choice);
 console.log("Result: " + score);
-humanScore = score == "draw" ? 0 : score == "computer wins" ? 0 : humanScore++;
+humanScore =
+  humanScore + (score == "draw" ? 0 : score == "computer wins" ? 0 : 1);
 computerScore =
-  score == "draw" ? 0 : score == "human wins" ? 0 : computerScore++;
+  computerScore + (score == "draw" ? 0 : score == "human wins" ? 0 : 1);
 console.log("Score = human: " + humanScore + ", computer: " + computerScore);
