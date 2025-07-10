@@ -21,8 +21,18 @@ console.log("User choice: " + human_choice);
 console.log("Computer choice: " + computer_choice);
 
 function evaluateOutcome(user_input, computer_input) {
+  let result = "draw";
   switch (user_input) {
     case "rock":
+      if (computer_input == "rock") {
+        result = "draw";
+      }
+      if (computer_input == "paper") {
+        result = "computer wins";
+      }
+      if (computer_input == "scissor") {
+        result = "human wins";
+      }
       break;
     case "paper":
       break;
