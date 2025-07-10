@@ -40,4 +40,7 @@ function evaluateOutcome(user_input, computer_input) {
       break;
     default:
   }
+  return result;
 }
+
+evaluateOutcome(human_choice, computer_choice);
