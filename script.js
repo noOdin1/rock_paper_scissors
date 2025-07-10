@@ -19,3 +19,15 @@ let computer_choice = getComputerChoice();
 
 console.log("User choice: " + human_choice);
 console.log("Computer choice: " + computer_choice);
+
+function evaluateOutcome(user_input, computer_input) {
+  switch (user_input) {
+    case "rock":
+      break;
+    case "paper":
+      break;
+    case "scissor":
+      break;
+    default:
+  }
+}
