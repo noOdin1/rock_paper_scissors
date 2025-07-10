@@ -56,18 +56,22 @@ function evaluateOutcome(user_input, computer_input) {
   return result;
 }
 
-let human_choice = getHumanChoice();
-let computer_choice = getComputerChoice();
+function playRound(humanChoice, computerChoice) {
+  score = evaluateOutcome(human_choice, computer_choice);
+  console.log("Result: " + score);
+  humanScore =
+    humanScore + (score == "draw" ? 0 : score == "computer wins" ? 0 : 1);
+  computerScore =
+    computerScore + (score == "draw" ? 0 : score == "human wins" ? 0 : 1);
+  console.log("Score = human: " + humanScore + ", computer: " + computerScore);
+}
+
+let humanSelection = getHumanChoice();
+let computerSelection = getComputerChoice();
 let humanScore = 0;
 let computerScore = 0;
 
-console.log("User choice: " + human_choice);
-console.log("Computer choice: " + computer_choice);
+console.log("User choice: " + humanSelection);
+console.log("Computer choice: " + computerSelection);
 
-score = evaluateOutcome(human_choice, computer_choice);
-console.log("Result: " + score);
-humanScore =
-  humanScore + (score == "draw" ? 0 : score == "computer wins" ? 0 : 1);
-computerScore =
-  computerScore + (score == "draw" ? 0 : score == "human wins" ? 0 : 1);
-console.log("Score = human: " + humanScore + ", computer: " + computerScore);
+playRound(humanSelection, computerSelection);
