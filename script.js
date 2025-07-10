@@ -67,6 +67,7 @@ function playGame() {
   let computerSelection = "rock";
 
   for (i = 1; i < 6; i++) {
+    console.log(`----===== Round ${i} =====----`);
     humanSelection = getHumanChoice();
     computerSelection = getComputerChoice();
 
