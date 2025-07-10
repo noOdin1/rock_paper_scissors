@@ -62,8 +62,12 @@ function evaluateOutcome(user_input, computer_input) {
   return result;
 }
 
+let humanScore = 0;
+let computerScore = 0;
+
 score = evaluateOutcome(human_choice, computer_choice);
 console.log("Result: " + score);
-human_score = score == "draw" ? "0" : score == "computer wins" ? "0" : "1";
-computer_score = score == "draw" ? "0" : score == "human wins" ? "0" : "1";
-console.log("Score = human: " + human_score + ", computer: " + computer_score);
+humanScore = score == "draw" ? 0 : score == "computer wins" ? 0 : humanScore++;
+computerScore =
+  score == "draw" ? 0 : score == "human wins" ? 0 : computerScore++;
+console.log("Score = human: " + humanScore + ", computer: " + computerScore);
