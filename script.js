@@ -24,9 +24,6 @@ function evaluateOutcome(user_input, computer_input) {
   let result = "draw";
   switch (user_input) {
     case "rock":
-      // if (computer_input == "rock") {
-      //   result = "draw";
-      // }
       if (computer_input == "paper") {
         result = "computer wins";
       }
@@ -38,9 +35,6 @@ function evaluateOutcome(user_input, computer_input) {
       if (computer_input == "rock") {
         result = "human wins";
       }
-      // if (computer_input == "paper") {
-      //   result = "draw";
-      // }
       if (computer_input == "scissor") {
         result = "computer wins";
       }
@@ -52,9 +46,6 @@ function evaluateOutcome(user_input, computer_input) {
       if (computer_input == "paper") {
         result = "human wins";
       }
-      // if (computer_input == "scissor") {
-      //   result = "draw";
-      // }
       break;
     default:
   }
@@ -72,8 +63,6 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function playGame() {
-  // let humanSelection = getHumanChoice();
-  // let computerSelection = getComputerChoice();
   let humanSelection = "rock";
   let computerSelection = "rock";
 
