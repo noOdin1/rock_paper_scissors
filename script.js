@@ -15,12 +15,6 @@ function getHumanChoice() {
   return interpretChoice(user_input);
 }
 
-let human_choice = getHumanChoice();
-let computer_choice = getComputerChoice();
-
-console.log("User choice: " + human_choice);
-console.log("Computer choice: " + computer_choice);
-
 function evaluateOutcome(user_input, computer_input) {
   let result = "draw";
   switch (user_input) {
@@ -62,8 +56,13 @@ function evaluateOutcome(user_input, computer_input) {
   return result;
 }
 
+let human_choice = getHumanChoice();
+let computer_choice = getComputerChoice();
 let humanScore = 0;
 let computerScore = 0;
+
+console.log("User choice: " + human_choice);
+console.log("Computer choice: " + computer_choice);
 
 score = evaluateOutcome(human_choice, computer_choice);
 console.log("Result: " + score);
