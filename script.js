@@ -8,14 +8,14 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-  const userInput = prompt(
+  const user_input = prompt(
     "Numbers 1, 2 and 3 please.\n1 for rock\n2 for paper\n3 for scissor\nPlease enter your choice:",
   );
-  return interpretChoice(userInput);
+  return interpretChoice(user_input);
 }
 
-let humanChoice = getHumanChoice();
-let computerChoice = getComputerChoice();
+let human_choice = getHumanChoice();
+let computer_choice = getComputerChoice();
 
-console.log("User choice: " + humanChoice);
-console.log("Computer choice: " + computerChoice);
+console.log("User choice: " + human_choice);
+console.log("Computer choice: " + computer_choice);
