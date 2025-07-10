@@ -9,7 +9,8 @@ function getComputerChoice() {
 
 function getHumanChoice() {
   let user_input = prompt(
-    "Numbers 1, 2 and 3 please.\n1 for rock\n2 for paper\n3 for scissor\nDefault value (1)\nPlease enter your choice:",
+    "Numbers 1, 2 and 3 please.\n1 for rock\n2 for paper" +
+      "\n3 for scissor\nDefault value (1)\nPlease enter your choice:",
     "1",
   );
 
