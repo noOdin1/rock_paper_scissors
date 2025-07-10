@@ -14,5 +14,8 @@ function getHumanChoice() {
   return interpretChoice(userInput);
 }
 
-console.log("User choice: " + getHumanChoice());
-console.log("Computer choice: " + getComputerChoice());
+let humanChoice = getHumanChoice();
+let computerChoice = getComputerChoice();
+
+console.log("User choice: " + humanChoice);
+console.log("Computer choice: " + computerChoice);
