@@ -35,8 +35,26 @@ function evaluateOutcome(user_input, computer_input) {
       }
       break;
     case "paper":
+      if (computer_input == "rock") {
+        result = "human wins";
+      }
+      if (computer_input == "paper") {
+        result = "draw";
+      }
+      if (computer_input == "scissor") {
+        result = "computer wins";
+      }
       break;
     case "scissor":
+      if (computer_input == "rock") {
+        result = "computer wins";
+      }
+      if (computer_input == "paper") {
+        result = "human wins";
+      }
+      if (computer_input == "scissor") {
+        result = "draw";
+      }
       break;
     default:
   }
