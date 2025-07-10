@@ -43,4 +43,4 @@ function evaluateOutcome(user_input, computer_input) {
   return result;
 }
 
-evaluateOutcome(human_choice, computer_choice);
+console.log("Result: " + evaluateOutcome(human_choice, computer_choice));
