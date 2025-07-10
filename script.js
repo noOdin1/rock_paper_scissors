@@ -76,6 +76,15 @@ function playGame() {
 
     playRound(humanSelection, computerSelection);
   }
+
+  console.log(`----===== Conclusion =====----`);
+  let finalResult =
+    humanScore == computerScore
+      ? "Nobody, it's a draw"
+      : humanScore > computerScore
+        ? "You"
+        : "Computer";
+  console.log("The overall winnner is: " + finalResult);
 }
 
 let humanScore = 0;
