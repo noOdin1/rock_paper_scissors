@@ -4,7 +4,7 @@ function interpretChoice(choice) {
 
 function getComputerChoice() {
   let choice = Math.floor(Math.random() * 3 + 1);
-  return choice == 1 ? "rock" : choice == 2 ? "paper" : "scissor";
+  return interpretChoice(choice);
 }
 
 function getHumanChoice() {
@@ -14,5 +14,5 @@ function getHumanChoice() {
   return interpretChoice(userInput);
 }
 
-console.log(getHumanChoice());
-console.log(getComputerChoice());
+console.log("User choice: " + getHumanChoice());
+console.log("Computer choice: " + getComputerChoice());
