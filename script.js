@@ -101,6 +101,7 @@ function playGame() {
         ? "You"
         : "Computer";
   console.log("The overall winnner is: " + finalResult);
+  document.querySelector("h1").textContent = "The Overall winner is: " + finalResult;
 }
 
 let humanScore = 0;
