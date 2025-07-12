@@ -13,9 +13,13 @@ function getHumanChoice() {
       "\n3 for scissor\nDefault value (1)\nPlease enter your choice:",
     scoreboard = "Human: " + humanScore + "; Computer: " + computerScore;
   user_input = prompt(
-    scoreboard + "\n" + userInputPrompt,
-    // "Numbers 1, 2 and 3 please.\n1 for rock\n2 for paper" +
-    //   "\n3 for scissor\nDefault value (1)\nPlease enter your choice:",
+    roundChoice +
+      "\n" +
+      roundResult +
+      "\n" +
+      scoreboard +
+      "\n" +
+      userInputPrompt,
     "1",
   );
 
@@ -66,11 +70,7 @@ function playRound(humanChoice, computerChoice) {
   computerScore =
     computerScore + (score == "draw" ? 0 : score == "human wins" ? 0 : 1);
   console.log("Score = human: " + humanScore + ", computer: " + computerScore);
-  // document.querySelector(".left").textContent = "Human: " + humanScore;
-  // document.querySelector(".right").textContent = "Computer" + humanScore;
-  // var computerScorePrintOut = document.querySelector(".right");
-
-  // console.log(document.querySelector(".left").textContent);
+  roundResult = score;
 }
 
 function playGame() {
@@ -86,6 +86,11 @@ function playGame() {
     console.log("Computer choice: " + computerSelection);
 
     playRound(humanSelection, computerSelection);
+    roundChoice =
+      "Human choice: " +
+      humanSelection +
+      "; Computer choice: " +
+      computerSelection;
   }
 
   console.log(`----===== Conclusion =====----`);
