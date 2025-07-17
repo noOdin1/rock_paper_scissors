@@ -11,8 +11,14 @@ body {
   margin: auto;
 }
 
-h1 {
+h1,
+.displayOutcome h3 {
   margin: auto;
+}
+
+.displayOutcome h3 {
+  text-align: center;
+  padding: 30px 25px;
 }
 
 .scoreboard,
