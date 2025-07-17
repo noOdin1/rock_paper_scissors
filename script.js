@@ -73,13 +73,13 @@ function playRound(humanChoice, computerChoice) {
   roundResult = score;
 }
 
-function playGame() {
-  let humanSelection = "rock";
+function playGame(humanSelection) {
+  // let humanSelection = "rock";
   let computerSelection = "rock";
 
   for (i = 1; i < 6; i++) {
     console.log(`----===== Round ${i} =====----`);
-    humanSelection = getHumanChoice();
+    // humanSelection = getHumanChoice();
     computerSelection = getComputerChoice();
 
     console.log("User choice: " + humanSelection);
@@ -113,6 +113,7 @@ function btnClick(e) {
       ", (id): " +
       e.target.id,
   );
+  playGame(humanChoice);
 }
 
 function gameRound() {}
