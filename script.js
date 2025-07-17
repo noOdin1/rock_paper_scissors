@@ -101,7 +101,11 @@ function playGame() {
         ? "You"
         : "Computer";
   console.log("The overall winnner is: " + finalResult);
-  document.querySelector("h1").textContent = "The Overall winner is: " + finalResult;
+  document.querySelector("h1").textContent =
+    "The Overall winner is: " + finalResult;
+}
+function gameOn() {
+  // This will be the new main 'switchboard' function
 }
 
 let humanScore = 0;
@@ -109,4 +113,5 @@ let computerScore = 0;
 let roundResult = "";
 let roundChoice = "";
 
-playGame();
+// playGame();
+gameOn();
