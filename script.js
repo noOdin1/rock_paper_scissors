@@ -129,8 +129,6 @@ function btnClick(e) {
   playRound(humanChoice, getComputerChoice());
 }
 
-function gameRound() {}
-
 function gameInitialize() {
   // This will be the new main 'switchboard' function
   var buttons = document.querySelectorAll("button");
