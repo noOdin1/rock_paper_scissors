@@ -64,6 +64,16 @@ function evaluateOutcome(user_input, computer_input) {
 
 function playRound(humanChoice, computerChoice) {
   score = evaluateOutcome(humanChoice, computerChoice);
+  var displayComputerChoice = document.querySelector(
+    ".displaySelection > .computer > h3",
+  );
+  var displayHumanChoice = document.querySelector(
+    ".displaySelection > .human > h3",
+  );
+  displayComputerChoice.textContent = computerChoice;
+  displayHumanChoice.textContent = humanChoice;
+  // console.log("playRound: displayComputerChoice");
+
   console.log("Result: " + score);
   humanScore =
     humanScore + (score == "draw" ? 0 : score == "computer wins" ? 0 : 1);
