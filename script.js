@@ -73,6 +73,8 @@ function playRound(humanChoice, computerChoice) {
   displayComputerChoice.textContent = computerChoice;
   displayHumanChoice.textContent = humanChoice;
   // console.log("playRound: displayComputerChoice");
+  var displayOutcome = document.querySelector(".displayOutcome > h3");
+  displayOutcome.textContent = score;
 
   console.log("Result: " + score);
   humanScore =
