@@ -37,7 +37,7 @@ function evaluateOutcome(user_input, computer_input) {
       if (computer_input == "paper") {
         result = "computer wins";
       }
-      if (computer_input == "scissor") {
+      if (computer_input == "scissors") {
         result = "human wins";
       }
       break;
@@ -45,11 +45,11 @@ function evaluateOutcome(user_input, computer_input) {
       if (computer_input == "rock") {
         result = "human wins";
       }
-      if (computer_input == "scissor") {
+      if (computer_input == "scissors") {
         result = "computer wins";
       }
       break;
-    case "scissor":
+    case "scissors":
       if (computer_input == "rock") {
         result = "computer wins";
       }
