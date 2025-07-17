@@ -1,0 +1,5 @@
+/* style.css for rock paper scissors project */
+body {
+  display: flex;
+  flex-direction: column;
+}
