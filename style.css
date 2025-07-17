@@ -1,5 +1,13 @@
 /* style.css for rock paper scissors project */
-body {
+body,
+.container {
   display: flex;
   flex-direction: column;
+}
+
+.scoreboard,
+.input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
