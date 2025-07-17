@@ -6,7 +6,8 @@ body,
 }
 
 .scoreboard,
-.input {
+.input,
+.displaySelection {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
