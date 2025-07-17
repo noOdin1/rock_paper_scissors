@@ -3,6 +3,12 @@ body,
 .container {
   display: flex;
   flex-direction: column;
+  align: center;
+}
+
+body {
+  width: 50%;
+  margin: auto;
 }
 
 .scoreboard,
