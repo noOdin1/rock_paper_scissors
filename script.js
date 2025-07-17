@@ -64,16 +64,9 @@ function evaluateOutcome(user_input, computer_input) {
 
 function playRound(humanChoice, computerChoice) {
   score = evaluateOutcome(humanChoice, computerChoice);
-  var displayComputerChoice = document.querySelector(
-    ".displaySelection > .computer > h3",
-  );
-  var displayHumanChoice = document.querySelector(
-    ".displaySelection > .human > h3",
-  );
   displayComputerChoice.textContent = computerChoice;
   displayHumanChoice.textContent = humanChoice;
   // console.log("playRound: displayComputerChoice");
-  var displayOutcome = document.querySelector(".displayOutcome > h3");
   displayOutcome.textContent = score;
 
   console.log("Result: " + score);
@@ -142,6 +135,13 @@ function gameInitialize() {
 
 var displayComputerScore = document.querySelector(".scoreboard > .computer");
 var displayHumanScore = document.querySelector(".scoreboard > .human");
+var displayComputerChoice = document.querySelector(
+  ".displaySelection > .computer > h3",
+);
+var displayHumanChoice = document.querySelector(
+  ".displaySelection > .human > h3",
+);
+var displayOutcome = document.querySelector(".displayOutcome > h3");
 let humanScore = 0;
 let computerScore = 0;
 let roundResult = "";
