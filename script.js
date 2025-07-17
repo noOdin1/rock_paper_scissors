@@ -117,21 +117,8 @@ function btnClick(e) {
 
 function gameOn() {
   // This will be the new main 'switchboard' function
-  var rockBtn = document.querySelector("button#rock");
-  var paperBtn = document.querySelector("button#paper");
-  var scissorsBtn = document.querySelector("button#scissors");
-
-  // var buttons = document.querySelectorAll("button");
-  // buttons.forEach((btn) => {
-  //   //btn.addEventListenter(btnClick)
-  //   console.dir(btn);
-  //   console.log(btn.attributes.id.textContent);
-  //   var button = document.querySelector("button#" + btn.id);
-  //   button.addEventListenter(btnClick);
-  // });
-  rockBtn.addEventListener("click", btnClick);
-  paperBtn.addEventListener("click", btnClick);
-  scissorsBtn.addEventListener("click", btnClick);
+  var buttons = document.querySelectorAll("button");
+  buttons.forEach((btn) => btn.addEventListener("click", btnClick));
 }
 
 let humanScore = 0;
