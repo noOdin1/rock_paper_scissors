@@ -115,7 +115,9 @@ function btnClick(e) {
   );
 }
 
-function gameOn() {
+function gameRound() {}
+
+function gameInitialize() {
   // This will be the new main 'switchboard' function
   var buttons = document.querySelectorAll("button");
   buttons.forEach((btn) => btn.addEventListener("click", btnClick));
@@ -127,4 +129,4 @@ let roundResult = "";
 let roundChoice = "";
 
 // playGame();
-gameOn();
+gameInitialize();
