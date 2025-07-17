@@ -113,7 +113,8 @@ function btnClick(e) {
       ", (id): " +
       e.target.id,
   );
-  playGame(humanChoice);
+  // playGame(humanChoice);
+  playRound(humanChoice, getComputerChoice());
 }
 
 function gameRound() {}
