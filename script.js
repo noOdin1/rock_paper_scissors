@@ -1,5 +1,5 @@
 function interpretChoice(choice) {
-  return choice == 1 ? "rock" : choice == 2 ? "paper" : "scissor";
+  return choice == 1 ? "rock" : choice == 2 ? "paper" : "scissors";
 }
 
 function getComputerChoice() {
