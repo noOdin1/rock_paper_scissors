@@ -104,8 +104,34 @@ function playGame() {
   document.querySelector("h1").textContent =
     "The Overall winner is: " + finalResult;
 }
+
+function btnClick(e) {
+  humanChoice = e.target.id;
+  console.log(
+    "Human choice: (text content): " +
+      e.target.textContent +
+      ", (id): " +
+      e.target.id,
+  );
+}
+
 function gameOn() {
   // This will be the new main 'switchboard' function
+  var rockBtn = document.querySelector("button#rock");
+  var paperBtn = document.querySelector("button#paper");
+  var scissorsBtn = document.querySelector("button#scissors");
+
+  // var buttons = document.querySelectorAll("button");
+  // buttons.forEach((btn) => {
+  //   //btn.addEventListenter(btnClick)
+  //   console.dir(btn);
+  //   console.log(btn.attributes.id.textContent);
+  //   var button = document.querySelector("button#" + btn.id);
+  //   button.addEventListenter(btnClick);
+  // });
+  rockBtn.addEventListener("click", btnClick);
+  paperBtn.addEventListener("click", btnClick);
+  scissorsBtn.addEventListener("click", btnClick);
 }
 
 let humanScore = 0;
