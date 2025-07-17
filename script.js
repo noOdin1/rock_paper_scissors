@@ -71,6 +71,8 @@ function playRound(humanChoice, computerChoice) {
     computerScore + (score == "draw" ? 0 : score == "human wins" ? 0 : 1);
   console.log("Score = human: " + humanScore + ", computer: " + computerScore);
   roundResult = score;
+  displayComputerScore.textContent = "Computer score: " + computerScore;
+  displayHumanScore.textContent = "Human score: " + humanScore;
 }
 
 function playGame(humanSelection) {
@@ -123,8 +125,13 @@ function gameInitialize() {
   // This will be the new main 'switchboard' function
   var buttons = document.querySelectorAll("button");
   buttons.forEach((btn) => btn.addEventListener("click", btnClick));
+
+  displayComputerScore.textContent += "0";
+  displayHumanScore.textContent += "0";
 }
 
+var displayComputerScore = document.querySelector(".scoreboard > .computer");
+var displayHumanScore = document.querySelector(".scoreboard > .human");
 let humanScore = 0;
 let computerScore = 0;
 let roundResult = "";
