@@ -23,7 +23,8 @@ h1,
 
 .scoreboard,
 .input,
-.displaySelection {
+.displaySelection,
+.image.container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
