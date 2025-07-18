@@ -173,6 +173,10 @@ function userKeyPress(event) {
   }
 }
 
+function resetGame() {
+  console.log("resetGame: Restarting the game");
+}
+
 function gameInitialize() {
   inputButtons.forEach((btn) => btn.addEventListener("click", btnClick));
 
@@ -180,6 +184,10 @@ function gameInitialize() {
 
   displayComputerScore.textContent += "0";
   displayHumanScore.textContent += "0";
+
+  // Reset button initialization
+  resetBtn.textContent = "Start Over?";
+  resetBtn.addEventListener("click", resetGame);
 }
 
 var inputButtons = document.querySelectorAll("button");
@@ -192,6 +200,7 @@ var displayHumanChoice = document.querySelector(
   ".displaySelection > .human > h3",
 );
 var displayOutcome = document.querySelector(".displayOutcome > h3");
+var resetBtn = document.createElement("button");
 let humanScore = 0;
 let computerScore = 0;
 let roundResult = "";
