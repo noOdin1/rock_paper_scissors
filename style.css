@@ -54,6 +54,11 @@ button {
   margin: 5px;
 }
 
+.resetBtn {
+  width: 120px;
+  margin: 12px;
+}
+
 button#scissors,
 button#paper,
 button#rock {
