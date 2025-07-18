@@ -68,11 +68,6 @@ function evaluateOutcome(user_input, computer_input) {
 }
 
 function displayAllResults(humanChoice, computerChoice, score) {
-  var computerImg = document.querySelector(
-    ".image.container > .computer > img",
-  );
-  var humanImg = document.querySelector(".image.container > .human > img");
-
   computerImg.src = "images/computer_" + computerChoice + ".png";
   computerImg.alt = "computer has chosen " + computerChoice;
   humanImg.src = "images/human_" + humanChoice + ".png";
@@ -175,6 +170,28 @@ function userKeyPress(event) {
 
 function resetGame() {
   console.log("resetGame: Restarting the game");
+
+  displayOutcome.textContent = " ";
+
+  computerImg.src = "images/blank.png";
+  computerImg.alt = "computer hasn't made a choice";
+  humanImg.src = "images/blank.png";
+  humanImg.alt = "human hasn't make a choice";
+  displayComputerChoice.textContent = " ";
+  displayHumanChoice.textContent = " ";
+  displayComputerScore.textContent = "Computer score: 0";
+  displayHumanScore.textContent = "Human score: 0";
+
+  var parentNode = document.querySelector(".input .human");
+  inputButtons.forEach((btn) => {
+    // Failsafe: ensure that the buttons wasn't added earlier
+    if (!parentNode.contains(btn)) {
+      parentNode.appendChild(btn);
+    }
+  });
+
+  computerScore = 0;
+  humanScore = 0;
 }
 
 function gameInitialize() {
@@ -188,6 +205,9 @@ function gameInitialize() {
   // Reset button initialization
   resetBtn.textContent = "Start Over?";
   resetBtn.addEventListener("click", resetGame);
+  resetBtn.classList.add("resetBtn"); // This will allow for the button styling
+  resetDiv = document.querySelector(".reset");
+  resetDiv.appendChild(resetBtn);
 }
 
 var inputButtons = document.querySelectorAll("button");
@@ -201,6 +221,9 @@ var displayHumanChoice = document.querySelector(
 );
 var displayOutcome = document.querySelector(".displayOutcome > h3");
 var resetBtn = document.createElement("button");
+var computerImg = document.querySelector(".image.container > .computer > img");
+var humanImg = document.querySelector(".image.container > .human > img");
+
 let humanScore = 0;
 let computerScore = 0;
 let roundResult = "";
