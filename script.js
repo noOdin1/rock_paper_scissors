@@ -115,38 +115,6 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-function playGame(humanSelection) {
-  // let humanSelection = "rock";
-  let computerSelection = "rock";
-
-  for (i = 1; i < 6; i++) {
-    console.log(`----===== Round ${i} =====----`);
-    // humanSelection = getHumanChoice();
-    computerSelection = getComputerChoice();
-
-    console.log("User choice: " + humanSelection);
-    console.log("Computer choice: " + computerSelection);
-
-    playRound(humanSelection, computerSelection);
-    roundChoice =
-      "Human choice: " +
-      humanSelection +
-      "; Computer choice: " +
-      computerSelection;
-  }
-
-  console.log(`----===== Conclusion =====----`);
-  let finalResult =
-    humanScore == computerScore
-      ? "Nobody, it's a draw"
-      : humanScore > computerScore
-        ? "You"
-        : "Computer";
-  console.log("The overall winnner is: " + finalResult);
-  document.querySelector("h1").textContent =
-    "The Overall winner is: " + finalResult;
-}
-
 function removeInputBtns() {
   // remove the input buttons to indicate that it is the end
   var parentNode = document.querySelector(".input .human");
