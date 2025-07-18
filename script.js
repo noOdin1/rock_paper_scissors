@@ -65,9 +65,19 @@ function evaluateOutcome(user_input, computer_input) {
 function displayAllResults(humanChoice, computerChoice, score) {
   displayComputerChoice.textContent = computerChoice;
   displayHumanChoice.textContent = humanChoice;
-  displayOutcome.textContent = score;
   displayComputerScore.textContent = "Computer score: " + computerScore;
   displayHumanScore.textContent = "Human score: " + humanScore;
+
+  if (humanScore >= 5 || computerScore >= 5) {
+    if (humanScore >= 5) {
+      displayOutcome.textContent = "You Won!!!";
+    }
+    if (computerScore >= 5) {
+      displayOutcome.textContent = "Computer won";
+    }
+  } else {
+    displayOutcome.textContent = score;
+  }
 }
 
 function playRound(humanChoice, computerChoice) {
@@ -82,11 +92,7 @@ function playRound(humanChoice, computerChoice) {
   console.log("Score = human: " + humanScore + ", computer: " + computerScore);
   roundResult = score;
 
-  displayComputerChoice.textContent = computerChoice;
-  displayHumanChoice.textContent = humanChoice;
-  displayOutcome.textContent = score;
-  displayComputerScore.textContent = "Computer score: " + computerScore;
-  displayHumanScore.textContent = "Human score: " + humanScore;
+  displayAllResults(humanChoice, computerChoice, score);
 }
 
 function playGame(humanSelection) {
