@@ -167,8 +167,10 @@ function userKeyPress(event) {
     event.key == "p" ||
     event.key == "s"
   ) {
+    humanChoice = interpretChoice(event.key);
     console.log("user keypress: " + event.key);
     console.log("Interpreted result: " + interpretChoice(event.key));
+    playRound(humanChoice, getComputerChoice());
   }
 }
 
