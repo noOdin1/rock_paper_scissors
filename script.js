@@ -81,18 +81,22 @@ function displayAllResults(humanChoice, computerChoice, score) {
 }
 
 function playRound(humanChoice, computerChoice) {
-  score = evaluateOutcome(humanChoice, computerChoice);
-  // console.log("playRound: displayComputerChoice");
+  if (humanScore < 5 && computerScore < 5) {
+    score = evaluateOutcome(humanChoice, computerChoice);
+    // console.log("playRound: displayComputerChoice");
 
-  console.log("Result: " + score);
-  humanScore =
-    humanScore + (score == "draw" ? 0 : score == "computer wins" ? 0 : 1);
-  computerScore =
-    computerScore + (score == "draw" ? 0 : score == "human wins" ? 0 : 1);
-  console.log("Score = human: " + humanScore + ", computer: " + computerScore);
-  roundResult = score;
+    console.log("Result: " + score);
+    humanScore =
+      humanScore + (score == "draw" ? 0 : score == "computer wins" ? 0 : 1);
+    computerScore =
+      computerScore + (score == "draw" ? 0 : score == "human wins" ? 0 : 1);
+    console.log(
+      "Score = human: " + humanScore + ", computer: " + computerScore,
+    );
+    roundResult = score;
 
-  displayAllResults(humanChoice, computerChoice, score);
+    displayAllResults(humanChoice, computerChoice, score);
+  }
 }
 
 function playGame(humanSelection) {
