@@ -109,6 +109,9 @@ function playRound(humanChoice, computerChoice) {
     roundResult = score;
 
     displayAllResults(humanChoice, computerChoice, score);
+    if (humanScore == 5 || computerScore == 5) {
+      removeInputBtns();
+    }
   }
 }
 
@@ -144,6 +147,19 @@ function playGame(humanSelection) {
     "The Overall winner is: " + finalResult;
 }
 
+function removeInputBtns() {
+  // remove the input buttons to indicate that it is the end
+  var parentNode = document.querySelector(".input .human");
+  console.log("parentNode: " + parentNode);
+  console.dir("parentNode: " + parentNode);
+  inputButtons.forEach((btn) => {
+    // Failsafe: ensure that the buttons wasn't removed earlier
+    if (parentNode.contains(btn)) {
+      parentNode.removeChild(btn);
+    }
+  });
+}
+
 function btnClick(e) {
   humanChoice = e.target.id;
   console.log(
@@ -159,18 +175,33 @@ function userKeyPress(event) {
   // The keypress captured is not what I originally coded the
   // function interpretChoice() to accept. So, some initial filter
   // is needed here.
-  if (
-    event.key == "1" ||
-    event.key == "2" ||
-    event.key == "3" ||
-    event.key == "r" ||
-    event.key == "p" ||
-    event.key == "s"
-  ) {
-    humanChoice = interpretChoice(event.key);
-    console.log("user keypress: " + event.key);
-    console.log("Interpreted result: " + interpretChoice(event.key));
-    playRound(humanChoice, getComputerChoice());
+  console.log(
+    "userKeyPress:humanScore = " +
+      humanScore +
+      ", computerScore: " +
+      computerScore,
+  );
+  if (humanScore < 5 && computerScore < 5) {
+    if (
+      event.key == "1" ||
+      event.key == "2" ||
+      event.key == "3" ||
+      event.key == "r" ||
+      event.key == "p" ||
+      event.key == "s"
+    ) {
+      keyPressed = event.key;
+      humanChoice = interpretChoice(keyPressed);
+      console.log("user keypress: " + keyPressed);
+      console.log("Interpreted result: " + interpretChoice(keyPressed));
+      playRound(humanChoice, getComputerChoice());
+      if (event.repeat) {
+        console.log("userKeyPress: repeated event.key = " + event.key);
+      }
+    }
+    if (humanScore == 5 || computerScore == 5) {
+      removeInputBtns();
+    }
   }
 }
 
