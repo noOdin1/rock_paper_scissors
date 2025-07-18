@@ -29,6 +29,20 @@ h1,
   justify-content: space-between;
 }
 
+.computer.choice,
+.human.choice {
+  width: 50%;
+}
+
+.human.choice {
+  text-align: right;
+}
+
 button {
-  width: 80px;
+  width: 75px;
+  margin: 5px;
+}
+
+button#scissors {
+  margin-right: 0px;
 }
