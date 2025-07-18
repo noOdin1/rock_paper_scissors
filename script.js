@@ -92,7 +92,6 @@ function displayAllResults(humanChoice, computerChoice, score) {
 function playRound(humanChoice, computerChoice) {
   if (humanScore < 5 && computerScore < 5) {
     score = evaluateOutcome(humanChoice, computerChoice);
-    // console.log("playRound: displayComputerChoice");
 
     console.log("Result: " + score);
     humanScore =
@@ -148,7 +147,6 @@ function btnClick(e) {
       ", (id): " +
       e.target.id,
   );
-  // playGame(humanChoice);
   playRound(humanChoice, getComputerChoice());
 }
 
@@ -175,5 +173,4 @@ let computerScore = 0;
 let roundResult = "";
 let roundChoice = "";
 
-// playGame();
 gameInitialize();
