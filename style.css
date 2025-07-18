@@ -1,4 +1,8 @@
 /* style.css for rock paper scissors project */
+html * {
+  font-family: Roboto, Verdana, Arial, San-serif;
+}
+
 body,
 .container {
   display: flex;
