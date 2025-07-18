@@ -1,4 +1,9 @@
 function interpretChoice(choice) {
+  // Previous implementation will always return 'scissors' which is a bug.
+  // This bug affects the computer's choice.
+  if (choice == "r") choice = 1;
+  if (choice == "p") choice = 2;
+  if (choice == "s") choice = 3;
   return choice == 1 ? "rock" : choice == 2 ? "paper" : "scissors";
 }
 
@@ -151,6 +156,9 @@ function btnClick(e) {
 }
 
 function userKeyPress(event) {
+  // The keypress captured is not what I originally coded the
+  // function interpretChoice() to accept. So, some initial filter
+  // is needed here.
   if (
     event.key == "1" ||
     event.key == "2" ||
@@ -160,6 +168,7 @@ function userKeyPress(event) {
     event.key == "s"
   ) {
     console.log("user keypress: " + event.key);
+    console.log("Interpreted result: " + interpretChoice(event.key));
   }
 }
 
