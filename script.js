@@ -150,10 +150,25 @@ function btnClick(e) {
   playRound(humanChoice, getComputerChoice());
 }
 
+function userKeyPress(event) {
+  if (
+    event.key == "1" ||
+    event.key == "2" ||
+    event.key == "3" ||
+    event.key == "r" ||
+    event.key == "p" ||
+    event.key == "s"
+  ) {
+    console.log("user keypress: " + event.key);
+  }
+}
+
 function gameInitialize() {
   // This will be the new main 'switchboard' function
   var buttons = document.querySelectorAll("button");
   buttons.forEach((btn) => btn.addEventListener("click", btnClick));
+
+  document.addEventListener("keydown", userKeyPress);
 
   displayComputerScore.textContent += "0";
   displayHumanScore.textContent += "0";
