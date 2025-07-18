@@ -69,7 +69,9 @@ function displayAllResults(humanChoice, computerChoice, score) {
   var humanImg = document.querySelector(".image.container > .human > img");
 
   computerImg.src = "images/computer_" + computerChoice + ".png";
+  computerImg.alt = "computer has chosen " + computerChoice;
   humanImg.src = "images/human_" + humanChoice + ".png";
+  humanImg.alt = "human has chosen " + humanChoice;
   displayComputerChoice.textContent = computerChoice;
   displayHumanChoice.textContent = humanChoice;
   displayComputerScore.textContent = "Computer score: " + computerScore;
