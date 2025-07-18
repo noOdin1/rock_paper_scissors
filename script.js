@@ -63,6 +63,13 @@ function evaluateOutcome(user_input, computer_input) {
 }
 
 function displayAllResults(humanChoice, computerChoice, score) {
+  var computerImg = document.querySelector(
+    ".image.container > .computer > img",
+  );
+  var humanImg = document.querySelector(".image.container > .human > img");
+
+  computerImg.src = "images/computer_" + computerChoice + ".png";
+  humanImg.src = "images/human_" + humanChoice + ".png";
   displayComputerChoice.textContent = computerChoice;
   displayHumanChoice.textContent = humanChoice;
   displayComputerScore.textContent = "Computer score: " + computerScore;
