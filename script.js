@@ -62,12 +62,17 @@ function evaluateOutcome(user_input, computer_input) {
   return result;
 }
 
-function playRound(humanChoice, computerChoice) {
-  score = evaluateOutcome(humanChoice, computerChoice);
+function displayAllResults(humanChoice, computerChoice, score) {
   displayComputerChoice.textContent = computerChoice;
   displayHumanChoice.textContent = humanChoice;
-  // console.log("playRound: displayComputerChoice");
   displayOutcome.textContent = score;
+  displayComputerScore.textContent = "Computer score: " + computerScore;
+  displayHumanScore.textContent = "Human score: " + humanScore;
+}
+
+function playRound(humanChoice, computerChoice) {
+  score = evaluateOutcome(humanChoice, computerChoice);
+  // console.log("playRound: displayComputerChoice");
 
   console.log("Result: " + score);
   humanScore =
@@ -76,6 +81,10 @@ function playRound(humanChoice, computerChoice) {
     computerScore + (score == "draw" ? 0 : score == "human wins" ? 0 : 1);
   console.log("Score = human: " + humanScore + ", computer: " + computerScore);
   roundResult = score;
+
+  displayComputerChoice.textContent = computerChoice;
+  displayHumanChoice.textContent = humanChoice;
+  displayOutcome.textContent = score;
   displayComputerScore.textContent = "Computer score: " + computerScore;
   displayHumanScore.textContent = "Human score: " + humanScore;
 }
