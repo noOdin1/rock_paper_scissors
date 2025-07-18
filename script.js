@@ -175,9 +175,7 @@ function userKeyPress(event) {
 }
 
 function gameInitialize() {
-  // This will be the new main 'switchboard' function
-  var buttons = document.querySelectorAll("button");
-  buttons.forEach((btn) => btn.addEventListener("click", btnClick));
+  inputButtons.forEach((btn) => btn.addEventListener("click", btnClick));
 
   document.addEventListener("keydown", userKeyPress);
 
@@ -185,6 +183,7 @@ function gameInitialize() {
   displayHumanScore.textContent += "0";
 }
 
+var inputButtons = document.querySelectorAll("button");
 var displayComputerScore = document.querySelector(".scoreboard > .computer");
 var displayHumanScore = document.querySelector(".scoreboard > .human");
 var displayComputerChoice = document.querySelector(
