@@ -28,3 +28,7 @@ h1,
   flex-direction: row;
   justify-content: space-between;
 }
+
+button {
+  width: 80px;
+}
