@@ -36,6 +36,7 @@ h1,
 
 .human.choice {
   text-align: right;
+  flex-direction: row-reverse;
 }
 
 button {
@@ -43,6 +44,8 @@ button {
   margin: 5px;
 }
 
-button#scissors {
+button#scissors,
+button#paper,
+button#rock {
   margin-right: 0px;
 }
